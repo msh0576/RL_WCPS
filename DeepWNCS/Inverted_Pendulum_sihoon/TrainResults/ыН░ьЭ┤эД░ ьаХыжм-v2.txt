@@ -1,0 +1,198 @@
+===========A2C 알고리즘============
+<hyper-parameter>
+DURATION_WEIGHT = 1
+CONTROL_WEIGHT = 0
+UTILITY_WEIGHT = 0
+triain-iteration = 500
+
+<결과>
+iteration = 50
+network utility = 6.07%
+system unstability = 54%
+평균 episode euration = 14.87
+-----------------------------------
+
+<hyper-parameter>
+[state에 time term 을 추가했음]
+DURATION_WEIGHT = 1
+CONTROL_WEIGHT = 0
+UTILITY_WEIGHT = 0
+triain-iteration = 500
+
+<결과>
+iteration = 50
+network utility = 5.73%
+system unstability = 60%
+평균 episode euration = 14.00
+-----------------------------------
+
+<hyper-parameter>
+[state에 time term 을 추가했음]
+DURATION_WEIGHT = 0
+CONTROL_WEIGHT = 1
+UTILITY_WEIGHT = 0
+triain-iteration = 300
+
+<결과>
+iteration = 50
+network utility = 2.69%
+system unstability = 34%
+평균 episode euration = 17.48
+-----------------------------------
+
+<hyper-parameter>
+[state에 time term 을 추가했음]
+[MODEL_v2]
+DURATION_WEIGHT = 0
+CONTROL_WEIGHT = 1
+UTILITY_WEIGHT = 0
+triain-iteration = 1500
+
+<결과>
+iteration = 50
+network utility = 2.66%
+system unstability = 42%
+평균 episode euration = 16.72
+-----------------------------------
+
+<hyper-parameter>
+[state에 time term 을 추가했음]
+[reward y=1/x 그래프 사용]
+[MODEL]
+DURATION_WEIGHT = 0
+CONTROL_WEIGHT = 1
+UTILITY_WEIGHT = 0
+triain-iteration = 1000
+
+<결과>
+iteration = 50
+network utility = 2.62%
+system unstability = 70%
+평균 episode duration = 14.14
+-----------------------------------
+
+<hyper-parameter>
+[state에 time term 을 추가했음]
+[error_reward y=1/x 그래프 사용]
+[duration_reward 지수승 그래프 사용]
+[MODEL_v3]
+DURATION_WEIGHT = 1
+CONTROL_WEIGHT = 1
+UTILITY_WEIGHT = 0
+triain-iteration = 1000
+
+<결과>
+그냥 학습이 안됨, 1초 전에 끝나버림
+-----------------------------------
+
+
+<hyper-parameter>
+[state에 time term 을 추가했음]
+[error_reward y=1/x 그래프 사용]
+[duration_reward 지수승 그래프 사용]
+[duration reward 를 매 step 마다]
+[MODEL_v3]
+DURATION_WEIGHT = 1
+CONTROL_WEIGHT = 0
+UTILITY_WEIGHT = 0
+triain-iteration = 1000
+
+<결과>
+학습이 잘 안됨
+-----------------------------------
+
+
+<hyper-parameter>
+[state에 time term 을 추가했음]
+[error_reward y=1/x 그래프 사용]
+[duration_reward 지수승 그래프 사용]
+[duration reward 를 성공할때만, 실패해도 안 줌]
+[MODEL_v3]
+DURATION_WEIGHT = 1
+CONTROL_WEIGHT = 1
+UTILITY_WEIGHT = 0
+triain-iteration = 1000
+
+<결과>
+iteration = 100
+network utility = 2.87%
+system unstability = 34%
+평균 episode duration = 16.95
+-----------------------------------
+
+<hyper-parameter>
+[state에 time term 을 추가했음]
+[error_reward y=1/x 그래프 사용]
+[duration_reward 지수승 그래프 사용]
+[duration reward 를 성공할때만, 실패해도 안 줌]
+[최대 duration을 20->30초로 변경]
+[MODEL_v4]
+DURATION_WEIGHT = 1
+CONTROL_WEIGHT = 1
+UTILITY_WEIGHT = 0
+triain-iteration = 1000
+
+<결과>
+iteration = 100
+network utility = 4.04%
+system unstability = 35%
+평균 episode duration = 17.12
+-----------------------------------
+
+<hyper-parameter>
+[state에 time term 을 추가했음]
+[error_reward y=1/x 그래프 사용]
+[duration_reward 지수승 그래프 사용]
+[duration reward 를 성공할때만, 실패해도 안 줌]
+[최대 duration을 20->30초로 변경]
+[state를 errorVector -> stateVector 로 변경]
+[MODEL_v5]
+DURATION_WEIGHT = 1
+CONTROL_WEIGHT = 1
+UTILITY_WEIGHT = 0
+triain-iteration = 1000
+
+<결과>
+iteration = 100
+network utility = 2.23%
+system unstability = 76%
+평균 episode duration = 12.96
+-----------------------------------
+
+<hyper-parameter>
+[state에 time term 을 추가했음]
+[error_reward y=1/x 그래프 사용]
+[duration_reward 지수승 그래프 사용]
+[duration reward 를 성공할때만, 실패해도 안 줌]
+[최대 duration을 20->30초로 변경]
+[MODEL_v3]
+DURATION_WEIGHT = 1
+CONTROL_WEIGHT = 1
+UTILITY_WEIGHT = 0
+triain-iteration = 1500
+
+<결과>
+iteration = 100
+network utility = 5.62%
+system unstability = 0%
+평균 episode duration = 19.90
+-----------------------------------
+
+
+
+============DQN 알고리즘===============
+
+<hyper-parameter>
+[state에 time term 을 추가했음]
+DURATION_WEIGHT = 0
+CONTROL_WEIGHT = 1
+UTILITY_WEIGHT = 0
+triain-iteration = 1000
+
+<결과>
+iteration = 50
+network utility = %
+system unstability = %
+평균 episode euration = 
+-----------------------------------
+

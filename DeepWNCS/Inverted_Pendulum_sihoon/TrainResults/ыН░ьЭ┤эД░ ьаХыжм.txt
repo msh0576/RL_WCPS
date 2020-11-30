@@ -1,0 +1,56 @@
+===========A2C 알고리즘============
+<hyper-parameter>
+DURATION_WEIGHT = 1
+CONTROL_WEIGHT = 0
+UTILITY_WEIGHT = 0
+<결과>
+iteration = 20
+network utility = 8.9%
+system unstability = 10%
+-----------------------------------
+
+<hyper-parameter>
+DURATION_WEIGHT = 0
+CONTROL_WEIGHT = 1
+UTILITY_WEIGHT = 0
+<결과>
+iteration = 100
+network utility = 11.77%
+system unstability = 76%
+-----------------------------------
+
+<hyper-parameter>
+DURATION_WEIGHT = 0
+CONTROL_WEIGHT = 0
+UTILITY_WEIGHT = 1
+<결과>
+iteration = 100
+network utility = 96.08%
+system unstability = 100%
+-----------------------------------
+
+<hyper-parameter>
+DURATION_WEIGHT = 0.5
+CONTROL_WEIGHT = 0
+UTILITY_WEIGHT = 0.5
+<결과>
+iteration = 100
+network utility = 6.18%
+system unstability = 33%
+-----------------------------------
+
+<hyper-parameter>
+DURATION_WEIGHT = 0.5
+CONTROL_WEIGHT = 0
+UTILITY_WEIGHT = 0.5
+utility reward 조금 수정 (중간에 끝날시 util_reward -)
+<결과>
+iteration = 100
+network utility = 8.5%
+system unstability = 8%
+-----------------------------------
+
+===========================
+
+
+
