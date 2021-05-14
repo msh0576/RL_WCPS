@@ -1,0 +1,10 @@
+[workspace]
+restore_data_on_startup = True
+save_data_on_exit = True
+save_history = True
+save_non_project_files = False
+
+[main]
+version = 0.2.0
+recent_files = ['Inverted_Pendulum_sihoon\\Environment.py', 'Inverted_Pendulum_sihoon\\memory.py', 'Inverted_Pendulum_sihoon\\model.py', 'Inverted_Pendulum_sihoon\\Main.py', 'Inverted_Pendulum_sihoon\\MultipendulumSim_A2C.py', 'Inverted_Pendulum_sihoon\\Plotter\\testDataPlotter.py', 'Inverted_Pendulum_sihoon\\Plant\\pendulumSim.py', 'Inverted_Pendulum_sihoon\\A2C.py']
+
