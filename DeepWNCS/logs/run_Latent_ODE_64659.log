@@ -1,0 +1,50 @@
+/home/sihoon/works/DeepWNCS/run_Latent_ODE.py
+run_Latent_ODE.py --niters 500 -n 1000 -l 10 --dataset periodic --latent-ode
+Experiment 64659
+Epoch 0001 [Test seq (cond on sampled tp)] | Loss 2466.488770 | Likelihood -2473.822510 | KL fp 5.5904 | FP STD 1.1485|
+KL coef: 0.0
+Train loss (one batch): 2468.57861328125
+Train CE loss (one batch): 0.0
+Test MSE: 0.4955
+Poisson likelihood: 0.0
+CE loss: 0.0
+Experiment 64659
+Epoch 0002 [Test seq (cond on sampled tp)] | Loss 2392.284912 | Likelihood -2396.355957 | KL fp 6.1187 | FP STD 0.9432|
+KL coef: 0.0
+Train loss (one batch): 2393.29345703125
+Train CE loss (one batch): 0.0
+Test MSE: 0.4800
+Poisson likelihood: 0.0
+CE loss: 0.0
+Experiment 64659
+Epoch 0003 [Test seq (cond on sampled tp)] | Loss 2329.421631 | Likelihood -2330.763428 | KL fp 6.3294 | FP STD 0.7078|
+KL coef: 0.0
+Train loss (one batch): 2342.34521484375
+Train CE loss (one batch): 0.0
+Test MSE: 0.4669
+Poisson likelihood: 0.0
+CE loss: 0.0
+Experiment 64659
+Epoch 0004 [Test seq (cond on sampled tp)] | Loss 2320.918213 | Likelihood -2323.025391 | KL fp 6.2632 | FP STD 0.6066|
+KL coef: 0.0
+Train loss (one batch): 2323.50244140625
+Train CE loss (one batch): 0.0
+Test MSE: 0.4653
+Poisson likelihood: 0.0
+CE loss: 0.0
+Experiment 64659
+Epoch 0005 [Test seq (cond on sampled tp)] | Loss 2313.807861 | Likelihood -2315.169434 | KL fp 6.3842 | FP STD 0.4855|
+KL coef: 0.0
+Train loss (one batch): 2312.930419921875
+Train CE loss (one batch): 0.0
+Test MSE: 0.4638
+Poisson likelihood: 0.0
+CE loss: 0.0
+Experiment 64659
+Epoch 0006 [Test seq (cond on sampled tp)] | Loss 2300.912109 | Likelihood -2302.090820 | KL fp 6.2437 | FP STD 0.4335|
+KL coef: 0.0
+Train loss (one batch): 2300.947021484375
+Train CE loss (one batch): 0.0
+Test MSE: 0.4612
+Poisson likelihood: 0.0
+CE loss: 0.0

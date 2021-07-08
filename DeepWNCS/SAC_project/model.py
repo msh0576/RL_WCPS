@@ -180,3 +180,20 @@ class DeterministicPolicy(nn.Module):
         self.action_bias = self.action_bias.to(device)
         self.noise = self.noise.to(device)
         return super(DeterministicPolicy, self).to(device)
+
+class RewardModel(nn.Module):
+    def __init__(self, state_size, hidden_size, activation_function='relu'):
+        # [--belief-size: 200, --hidden-size: 200, --state-size: 30]
+        super().__init__()
+        self.act_fn = getattr(F, activation_function)
+        self.fc1 = nn.Linear(state_size, hidden_size)
+        self.fc2 = nn.Linear(hidden_size, hidden_size)
+        self.fc3 = nn.Linear(hidden_size, 1)
+        self.modules = [self.fc1, self.fc2, self.fc3]
+
+    def forward(self, state):
+        hidden = self.act_fn(self.fc1(state))
+        hidden = self.act_fn(self.fc2(hidden))
+        reward = self.fc3(hidden).squeeze(dim=1)
+        return reward
+    

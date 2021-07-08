@@ -1,0 +1,2 @@
+/home/sihoon/works/DeepWNCS/run_Latent_ODE.py
+run_Latent_ODE.py --niters 100 -n 10000 -l 15 --dataset hopper --latent-ode --rec-dims 30 --gru-units 100 --units 300 --gen-layers 3 --rec-layers 3

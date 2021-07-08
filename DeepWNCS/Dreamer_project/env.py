@@ -259,6 +259,8 @@ class EnvBatcher():
 
 def run_timestep_without_action(env, start_time):
     '''
+    Added by sihoon
+    
     During 9ms, it runs environment steps without any action
     <Argument>
         start_time: integer: ex. start_time 1 == 10ms

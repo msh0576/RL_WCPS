@@ -173,6 +173,7 @@ def update_belief_and_act(args, env, planner, transition_model, encoder, belief,
     next_observation, reward, done = env.step(action[0].cpu())
   return belief, posterior_state, action, next_observation, reward, done
 
+dummy = 0
 # Training (and testing)
 for episode in tqdm(range(metrics['episodes'][-1] + 1, args.episodes + 1), total=args.episodes, initial=metrics['episodes'][-1] + 1):
   # Model fitting
@@ -236,6 +237,11 @@ for episode in tqdm(range(metrics['episodes'][-1] + 1, args.episodes + 1), total
     model_loss.backward()
     nn.utils.clip_grad_norm_(param_list, args.grad_clip_norm, norm_type=2)
     model_optimizer.step()
+
+    # dummy code
+    # dummy += 1
+    # if dummy % 10 == 0:
+    #   print("reward_loss:", reward_loss)
 
     #Dreamer implementation: actor loss calculation and optimization    
     # print("\n posterior_states shape, beliefs shape:", posterior_states.shape, beliefs.shape) # torch.Size([49, 50, 30]) torch.Size([49, 50, 200])

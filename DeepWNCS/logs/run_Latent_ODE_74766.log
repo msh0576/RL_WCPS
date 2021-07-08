@@ -1,0 +1,2 @@
+/home/sihoon/works/DeepWNCS/run_Latent_ODE.py
+run_Latent_ODE.py --niters 500 -n 1000 -l 10 --dataset periodic --latent-ode

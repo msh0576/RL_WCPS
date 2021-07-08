@@ -8,10 +8,11 @@ import torch
 from torch.nn import functional as F
 from typing import Iterable
 from torch.nn import Module
+import random
 
 
 # Plots min, max and mean + standard deviation bars of a population over time
-def lineplot(xs, ys_population, title, path='', xaxis='episode', mode='lines'):
+def lineplot(xs, ys_population, title, path='', xaxis='episode', mode='lines', auto_open=False):
   max_colour, mean_colour, std_colour, transparent = 'rgb(0, 132, 180)', 'rgb(0, 172, 237)', 'rgba(29, 202, 255, 0.2)', 'rgba(0, 0, 0, 0)'
 
   if isinstance(ys_population[0], list) or isinstance(ys_population[0], tuple):
@@ -31,7 +32,7 @@ def lineplot(xs, ys_population, title, path='', xaxis='episode', mode='lines'):
   plotly.offline.plot({
     'data': data,
     'layout': dict(title=title, xaxis={'title': xaxis}, yaxis={'title': title})
-  }, filename=os.path.join(path, title + '.html'), auto_open=False)
+  }, filename=os.path.join(path, title + '.html'), auto_open=auto_open)
 
 
 
@@ -175,3 +176,29 @@ class FreezeParameters:
   def __exit__(self, exc_type, exc_val, exc_tb):
       for i, param in enumerate(get_parameters(self.modules)):
           param.requires_grad = self.param_states[i]
+
+global_sched_idx = 0
+def sequentialSchedule(schedule_size):
+    '''
+        Input:
+            schedule_size: possible schedule range
+        Output:
+            sched: torch [1, ], current scheduled system index
+    '''
+    global global_sched_idx
+    sched = torch.tensor([global_sched_idx % schedule_size], dtype=torch.float32)
+    global_sched_idx += 1
+    return sched
+
+def randomSchedule(schedule_size):
+    '''
+      Input:
+        schedule_size: ex) if num_plant=2, then it should be 3
+      Output:
+        sched: torch, [1, ]
+    '''
+    sched = random.randint(0, schedule_size-1)
+    sched = torch.tensor([sched], dtype=torch.float32)
+    return sched
+    
+

@@ -1,0 +1,10 @@
+/home/sihoon/works/DeepWNCS/latent_ode-master/run_models.py
+run_models.py --niters 100 -n 5000 -b 100 -l 3 --dataset periodic --latent-ode --noise-weight 0.5 --lr 0.01 --viz --rec-layers 2 --gen-layers 2 -u 100 -c 30
+Experiment 85506
+Epoch 0001 [Test seq (cond on sampled tp)] | Loss 2402.653076 | Likelihood -2403.757568 | KL fp 23.9783 | FP STD 1.0946|
+KL coef: 0.0
+Train loss (one batch): 2424.43212890625
+Train CE loss (one batch): 0.0
+Test MSE: 0.4815
+Poisson likelihood: 0.0
+CE loss: 0.0
